@@ -1,0 +1,1425 @@
+# Your Personal Website: A Complete Beginner's Guide
+
+I'll explain everything step by step so you can understand how your website works!
+
+## What is a Website?
+
+Think of a website like a **digital house**:
+- **HTML** = The structure (walls, rooms, doors)
+- **CSS** = The decoration (paint, furniture, colors)
+- **JavaScript** = The electricity (lights that turn on/off, interactive features)
+
+## Let's Break Down Your Website Piece by Piece
+
+### 1. The Basic Structure (HTML)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is like the "blueprint" of your house -->
+    <title>Your Name | Portfolio & Blog</title>
+</head>
+<body>
+    <!-- This is where all the visible content goes -->
+    <header>Navigation Menu</header>
+    <section>Home Section</section>
+    <section>About Me</section>
+    <!-- etc... -->
+</body>
+</html>
+```
+
+### 2. Your Website Sections Explained
+
+**🏠 Home Section** - The front door of your digital house
+- Big welcome message with your name
+- Your photo/avatar
+- Quick introduction
+- Buttons to see your work or contact you
+
+**👤 About Me** - Your personal story room
+- Who you are and what you do
+- Your background and interests
+- Your hobbies (shown as little tags)
+
+**💼 Portfolio** - Your work showcase room
+- Displays your projects like pictures on a wall
+- Each project has:
+  - Project image
+  - Description
+  - Technology tags (like "HTML", "JavaScript")
+  - Link to view the project
+
+**🛠️ Skills** - Your tools and abilities display
+- Shows what you're good at
+- Visual progress bars for each skill
+- Organized by categories (Frontend, Backend, Tools)
+
+**📝 Blog** - Your thoughts and writings
+- Blog posts displayed as cards
+- Each has title, date, category, and excerpt
+- "Read More" button for full articles
+
+**🖼️ Gallery** - Your personal photos space
+- Grid of images that represent your life/interests
+- Hover effects for interactivity
+
+**📞 Contact** - Your communication center
+- Contact information (email, phone, location)
+- Social media links
+- Contact form for visitors to message you
+
+### 3. The Color System
+
+Your website uses these colors:
+- **Pink** (#ff4da6) - For accents and highlights
+- **Blue** (#3f8efc) - For links and some backgrounds
+- **Purple** (#a259ff) - For buttons and important elements
+- **Black** (#111111) - For dark mode background
+
+### 4. Light/Dark Mode Magic
+
+This is like having **light switches** in your house:
+
+```javascript
+// When you click the theme button:
+themeToggle.addEventListener('click', () => {
+    if (current theme is light) {
+        change to dark theme
+        save preference
+    } else {
+        change to light theme
+        save preference
+    }
+});
+```
+
+The website remembers your choice using `localStorage` - like writing your preference in a notebook that the browser remembers.
+
+### 5. How to Customize Your Website
+
+**Easy Changes You Can Make:**
+
+1. **Change Your Name**:
+   - Find: `<div class="logo">Your<span>Name</span></div>`
+   - Replace "YourName" with your actual name
+
+2. **Update Contact Info**:
+   - Find the contact section
+   - Change email, phone, and location
+
+3. **Add Your Real Projects**:
+   - In the portfolio section, replace the placeholder projects
+   - Add real project images, descriptions, and links
+
+4. **Customize Skills**:
+   - Update the skill names and percentages
+   - Add or remove skills as needed
+
+### 6. How the Website Responds to Different Screens
+
+Your website automatically adjusts for:
+- **Computers** (shows full navigation menu)
+- **Tablets** (adjusts layout but keeps most features)
+- **Phones** (shows hamburger menu ☰ and stacked content)
+
+### 7. File Structure (When You're Ready to Expand)
+
+When you want to add more pages or features, here's how to organize:
+
+```
+your-website/
+├── index.html          (this main file)
+├── css/
+│   └── style.css       (all styling rules)
+├── js/
+│   └── script.js       (all interactive features)
+├── images/             (your photos and project images)
+│   ├── profile.jpg
+│   ├── project1.jpg
+│   └── ...
+└── blog/               (future blog posts)
+    ├── post1.html
+    └── ...
+```
+
+### 8. How to Get This Website Online
+
+**Free Options:**
+1. **GitHub Pages** - Connect your GitHub account and upload files
+2. **Netlify** - Drag and drop your folder to deploy
+3. **Vercel** - Similar to Netlify, also free
+
+### 9. Next Steps for You
+
+**Immediate (Do Today):**
+1. Copy the code into a file called `index.html`
+2. Open it in your browser - it works instantly!
+3. Change the name and contact information
+
+**Short-term (This Week):**
+1. Add your real projects to the portfolio
+2. Customize the skills section
+3. Add your actual photos
+
+**Long-term (When Ready):**
+1. Learn how to connect a custom domain (yourname.com)
+2. Add a real blog system
+3. Connect the contact form to actually send emails
+
+### 10. Common Questions Answered
+
+**Q: Do I need to pay for this?**
+A: No! The website code is free, and hosting can be free too.
+
+**Q: What if I don't know how to code?**
+A: That's okay! I've given you specific places to change text. You can just edit the words without touching the code structure.
+
+**Q: Can I break something?**
+A: You can always copy the original code again, so feel free to experiment!
+
+**Q: How do I add my real photo?**
+A: Replace the placeholder with: `<img src="your-photo.jpg" alt="Your Name">`
+
+## Your Success Path
+
+1. **Start Simple** - Just change the text and colors first
+2. **Add Content Gradually** - One section at a time
+3. **Experiment Safely** - Make copies before big changes
+4. **Ask for Help** - The coding community is very supportive!
+
+Remember: Every expert was once a beginner. Your website will grow and improve as you learn more. This is a perfect starting point that already looks professional! 🚀
+
+Would you like me to explain any specific part in more detail?
+
+# Complete Personal Website Code - Beginner Explanation
+
+I'll break down the entire code piece by piece so you understand exactly what each part does.
+
+## The Complete HTML Structure
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HEAD SECTION: Invisible settings for the browser -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio & Blog</title>
+    
+    <!-- Google Fonts - Makes text look pretty -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+    /* CSS SECTION: This is where ALL the styling happens */
+    /* Think of this as the PAINT and DECORATION for your website */
+    
+    /* COLOR VARIABLES - Like having a color palette ready */
+    :root {
+        --pink: #ff4da6;
+        --blue: #3f8efc;
+        --purple: #a259ff;
+        --black: #111111;
+        --white: #ffffff;
+        --light-bg: #f8f9fa;
+        --dark-bg: #1a1a1a;
+        --gray: #6c757d;
+        --light-gray: #e9ecef;
+        --dark-gray: #343a40;
+    }
+
+    /* LIGHT THEME SETTINGS */
+    [data-theme="light"] {
+        --bg-color: var(--light-bg);        /* Background color */
+        --text-color: var(--black);         /* Text color */
+        --card-bg: var(--white);            /* Card backgrounds */
+        --border-color: var(--light-gray);  /* Border colors */
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Shadow effect */
+    }
+
+    /* DARK THEME SETTINGS */
+    [data-theme="dark"] {
+        --bg-color: var(--dark-bg);
+        --text-color: var(--white);
+        --card-bg: var(--black);
+        --border-color: var(--dark-gray);
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* BASIC RESET - Makes everything consistent across browsers */
+    * {
+        margin: 0;           /* Remove default spacing */
+        padding: 0;          /* Remove default padding */
+        box-sizing: border-box; /* Makes padding and borders included in element width */
+        transition: background-color 0.3s, color 0.3s; /* Smooth color changes */
+    }
+
+    /* SMOOTH SCROLLING */
+    html {
+        scroll-behavior: smooth; /* When clicking links, page scrolls smoothly */
+    }
+
+    /* BODY STYLING - The main canvas */
+    body {
+        font-family: 'Inter', sans-serif;  /* Default text font */
+        background-color: var(--bg-color); /* Uses our variable */
+        color: var(--text-color);          /* Uses our variable */
+        line-height: 1.6;                  /* Space between lines */
+    }
+
+    /* HEADING STYLES */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif; /* Different font for headings */
+        font-weight: 600;                   /* Makes text bolder */
+        margin-bottom: 1rem;                /* Space below headings */
+    }
+
+    h1 {
+        font-size: 2.5rem;  /* Big text for main headings */
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        position: relative; /* Needed for the underline effect */
+    }
+
+    /* CREATES THE COLORFUL UNDERLINE UNDER SECTION TITLES */
+    h2::after {
+        content: '';             /* Creates an empty element */
+        position: absolute;      /* Positions it relative to the h2 */
+        bottom: -8px;           /* Places it below the text */
+        left: 0;                /* Starts from left */
+        width: 50px;            /* Length of the line */
+        height: 3px;            /* Thickness of the line */
+        background: linear-gradient(to right, var(--pink), var(--purple)); /* Color gradient */
+    }
+
+    /* PARAGRAPH STYLING */
+    p {
+        margin-bottom: 1rem;    /* Space below paragraphs */
+    }
+
+    /* LINK STYLING */
+    a {
+        color: var(--blue);     /* Link color */
+        text-decoration: none;  /* Removes underline */
+        transition: color 0.3s; /* Smooth color change on hover */
+    }
+
+    a:hover {
+        color: var(--purple);   /* Changes color when mouse hovers */
+    }
+
+    /* CONTAINER - Centers content and sets width */
+    .container {
+        width: 90%;             /* 90% of screen width */
+        max-width: 1200px;      /* Never wider than 1200px */
+        margin: 0 auto;         /* Centers horizontally */
+        padding: 0 15px;        /* Space on sides */
+    }
+
+    /* BUTTON STYLING */
+    .btn {
+        display: inline-block;  /* Makes it behave like a button */
+        padding: 10px 20px;     /* Space inside button */
+        background: linear-gradient(to right, var(--pink), var(--purple)); /* Color gradient */
+        color: white;           /* Text color */
+        border: none;           /* No border */
+        border-radius: 5px;     /* Rounded corners */
+        font-weight: 500;       /* Medium bold text */
+        cursor: pointer;        /* Shows hand cursor on hover */
+        transition: transform 0.3s, box-shadow 0.3s; /* Smooth animations */
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);        /* Moves button up slightly */
+        box-shadow: 0 4px 10px rgba(162, 89, 255, 0.3); /* Adds shadow */
+        color: white;                       /* Keeps text white */
+    }
+
+    /* OUTLINE BUTTON VARIANT */
+    .btn-outline {
+        background: transparent;        /* No background */
+        border: 2px solid var(--purple); /* Purple border */
+        color: var(--text-color);       /* Normal text color */
+    }
+
+    .btn-outline:hover {
+        background: var(--purple);      /* Purple background on hover */
+        color: white;                   /* White text on hover */
+    }
+
+    /* SECTION SPACING */
+    section {
+        padding: 80px 0;        /* Space above and below sections */
+    }
+
+    /* CENTERED SECTION TITLES */
+    .section-title {
+        text-align: center;     /* Centers the text */
+        margin-bottom: 3rem;    /* Space below title */
+    }
+
+    .section-title h2::after {
+        left: 50%;              /* Centers the underline */
+        transform: translateX(-50%); /* Precisely centers it */
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+        position: fixed;        /* Stays at top when scrolling */
+        top: 0;                 /* At the very top */
+        left: 0;                /* At the very left */
+        width: 100%;            /* Full width */
+        background-color: var(--card-bg); /* Background color */
+        box-shadow: var(--shadow); /* Subtle shadow */
+        z-index: 1000;          /* Stays above other content */
+        padding: 15px 0;        /* Space inside header */
+    }
+
+    /* NAVIGATION LAYOUT */
+    nav {
+        display: flex;                  /* Flexible box layout */
+        justify-content: space-between; /* Space between logo and links */
+        align-items: center;            /* Centers vertically */
+    }
+
+    /* LOGO STYLING */
+    .logo {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;               /* Extra bold */
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+
+    .logo span {
+        color: var(--purple);   /* Makes part of logo purple */
+    }
+
+    /* NAVIGATION LINKS */
+    .nav-links {
+        display: flex;          /* Lines up links horizontally */
+        list-style: none;       /* Removes bullet points */
+    }
+
+    .nav-links li {
+        margin-left: 30px;      /* Space between links */
+    }
+
+    .nav-links a {
+        color: var(--text-color);
+        font-weight: 500;
+        position: relative;     /* Needed for hover effect */
+    }
+
+    /* ANIMATED UNDERLINE ON HOVER */
+    .nav-links a::after {
+        content: '';            /* Creates empty element */
+        position: absolute;     
+        bottom: -5px;          /* Positions below text */
+        left: 0;
+        width: 0;              /* Starts invisible */
+        height: 2px;
+        background-color: var(--pink);
+        transition: width 0.3s; /* Animated width change */
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;           /* Expands to full width on hover */
+    }
+
+    /* THEME TOGGLE BUTTON */
+    .theme-toggle {
+        background: none;      /* No background */
+        border: none;          /* No border */
+        color: var(--text-color);
+        cursor: pointer;       /* Hand cursor */
+        font-size: 1.2rem;
+        margin-left: 20px;     /* Space from other elements */
+    }
+
+    /* MOBILE MENU (Hamburger icon) */
+    .mobile-menu {
+        display: none;         /* Hidden on desktop */
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* HERO SECTION (Top of page) */
+    .hero {
+        padding-top: 150px;    /* Extra space for fixed header */
+        padding-bottom: 100px;
+        text-align: center;    /* Centers all content */
+        background: linear-gradient(135deg, rgba(162, 89, 255, 0.1) 0%, rgba(63, 142, 252, 0.1) 100%); /* Subtle gradient */
+    }
+
+    .hero-content {
+        max-width: 800px;      /* Limits width for readability */
+        margin: 0 auto;        /* Centers horizontally */
+    }
+
+    .hero h1 {
+        font-size: 3rem;       /* Very large text */
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;     /* Slightly larger text */
+        margin-bottom: 2rem;
+        color: var(--gray);    /* Gray text for contrast */
+    }
+
+    /* HERO BUTTONS LAYOUT */
+    .hero-btns {
+        display: flex;
+        justify-content: center; /* Centers buttons */
+        gap: 15px;              /* Space between buttons */
+        margin-top: 2rem;
+    }
+
+    /* PROFILE IMAGE PLACEHOLDER */
+    .hero-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;     /* Makes it circular */
+        margin: 0 auto 2rem;    /* Centers and adds space below */
+        background-color: var(--purple);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 4rem;
+        box-shadow: 0 10px 20px rgba(162, 89, 255, 0.2); /* Purple shadow */
+    }
+
+    /* ABOUT SECTION LAYOUT */
+    .about-content {
+        display: grid;                  /* CSS Grid layout */
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 50px;                      /* Space between columns */
+        align-items: center;            /* Vertically centers content */
+    }
+
+    .about-text h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    /* ABOUT IMAGE STYLING */
+    .about-image {
+        border-radius: 10px;    /* Rounded corners */
+        overflow: hidden;       /* Hides anything outside border */
+        box-shadow: var(--shadow);
+    }
+
+    .about-image img {
+        width: 100%;            /* Fills container */
+        height: auto;           /* Maintains aspect ratio */
+        display: block;         /* Removes extra space below */
+    }
+
+    /* HOBBIES TAGS */
+    .hobbies {
+        display: flex;          /* Lines up tags */
+        flex-wrap: wrap;        /* Wraps to next line if needed */
+        gap: 10px;              /* Space between tags */
+        margin-top: 1.5rem;
+    }
+
+    .hobby-tag {
+        background-color: var(--card-bg);
+        padding: 5px 15px;
+        border-radius: 20px;    /* Pill-shaped */
+        font-size: 0.9rem;      /* Slightly smaller text */
+        border: 1px solid var(--border-color);
+    }
+
+    /* PORTFOLIO GRID */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+        gap: 30px;              /* Space between items */
+    }
+
+    .portfolio-item {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s; /* Smooth lift animation */
+    }
+
+    .portfolio-item:hover {
+        transform: translateY(-5px); /* Lifts up on hover */
+    }
+
+    .portfolio-img {
+        height: 200px;
+        background-color: var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .portfolio-content {
+        padding: 20px;          /* Space inside content area */
+    }
+
+    .portfolio-content h3 {
+        margin-bottom: 10px;
+    }
+
+    /* PROJECT TAGS */
+    .portfolio-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .portfolio-tag {
+        background-color: rgba(63, 142, 252, 0.1); /* Semi-transparent blue */
+        color: var(--blue);
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 0.8rem;      /* Small text */
+    }
+
+    /* SKILLS LAYOUT */
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .skill-category {
+        background-color: var(--card-bg);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+    }
+
+    .skill-category h3 {
+        margin-bottom: 1.5rem;
+        color: var(--purple);   /* Purple category titles */
+    }
+
+    .skill-item {
+        margin-bottom: 15px;    /* Space between skills */
+    }
+
+    .skill-name {
+        display: flex;
+        justify-content: space-between; /* Skill name and percentage on same line */
+        margin-bottom: 5px;
+    }
+
+    /* SKILL PROGRESS BAR */
+    .skill-bar {
+        height: 8px;
+        background-color: var(--border-color); /* Background bar */
+        border-radius: 4px;
+        overflow: hidden;       /* Hides overflowing colored part */
+    }
+
+    .skill-level {
+        height: 100%;
+        background: linear-gradient(to right, var(--pink), var(--purple)); /* Colored progress */
+        border-radius: 4px;
+    }
+
+    .resume-download {
+        text-align: center;     /* Centers the download button */
+        margin-top: 3rem;
+    }
+
+    /* BLOG GRID */
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .blog-card {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+    }
+
+    .blog-img {
+        height: 180px;
+        background-color: var(--pink);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .blog-content {
+        padding: 20px;
+    }
+
+    /* BLOG POST META INFO */
+    .blog-meta {
+        display: flex;
+        font-size: 0.9rem;      /* Smaller text */
+        color: var(--gray);     /* Gray color */
+        margin-bottom: 10px;
+    }
+
+    .blog-date {
+        margin-right: 15px;     /* Space between date and category */
+    }
+
+    /* GALLERY GRID */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;              /* Tighter spacing */
+    }
+
+    .gallery-item {
+        height: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;      /* Crops image to fill container */
+        transition: transform 0.3s; /* Smooth zoom animation */
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.05); /* Zooms in slightly on hover */
+    }
+
+    /* CONTACT SECTION LAYOUT */
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 50px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column; /* Stacks items vertically */
+        gap: 20px;              /* Space between contact items */
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;    /* Centers icon and text vertically */
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(to right, var(--pink), var(--purple));
+        border-radius: 50%;     /* Circular icons */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;     /* Space between icon and text */
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    /* CONTACT FORM */
+    .contact-form {
+        background-color: var(--card-bg);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+    }
+
+    .form-group {
+        margin-bottom: 20px;    /* Space between form fields */
+    }
+
+    .form-group label {
+        display: block;         /* Makes label take full width */
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        color: var(--text-color);
+        font-family: 'Inter', sans-serif;
+    }
+
+    textarea.form-control {
+        min-height: 150px;      /* Taller for messages */
+        resize: vertical;       /* Allows vertical resizing only */
+    }
+
+    /* SOCIAL MEDIA LINKS */
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        background-color: var(--card-bg);
+        border-radius: 50%;     /* Circular buttons */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color);
+        transition: all 0.3s;   /* Smooth all property changes */
+    }
+
+    .social-link:hover {
+        background: linear-gradient(to right, var(--pink), var(--purple));
+        color: white;
+        transform: translateY(-3px); /* Lifts up on hover */
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: var(--card-bg);
+        padding: 40px 0 20px;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05); /* Shadow at top */
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .copyright {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color); /* Top border line */
+        color: var(--gray);
+        font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE DESIGN - Makes website work on all devices */
+
+    /* For tablets and smaller screens */
+    @media (max-width: 992px) {
+        .about-content,
+        .contact-container {
+            grid-template-columns: 1fr; /* Single column layout */
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;  /* Slightly smaller heading */
+        }
+    }
+
+    /* For mobile phones */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;      /* Hide desktop menu */
+        }
+        
+        .mobile-menu {
+            display: block;     /* Show hamburger menu */
+        }
+        
+        .hero-btns {
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center;
+        }
+        
+        .footer-content {
+            flex-direction: column; /* Stack footer content */
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            justify-content: center; /* Center footer links */
+        }
+    }
+
+    /* For very small phones */
+    @media (max-width: 576px) {
+        section {
+            padding: 60px 0;    /* Less padding on small screens */
+        }
+        
+        .hero {
+            padding-top: 120px; /* Less top padding */
+        }
+        
+        .hero h1 {
+            font-size: 2rem;    /* Smaller main heading */
+        }
+        
+        h2 {
+            font-size: 1.7rem;  /* Smaller section headings */
+        }
+    }
+    </style>
+</head>
+<body data-theme="light">
+    <!-- Everything below is VISIBLE CONTENT -->
+
+    <!-- HEADER: Stays at top when scrolling -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Your<span>Name</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: First thing visitors see -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <span>👤</span>  <!-- This is where your photo goes -->
+                </div>
+                <h1>Hi, I'm Your Name</h1>
+                <p>Web Developer & Creative Thinker</p>
+                <p>I build beautiful, functional websites and applications that solve real problems.</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION: Your personal story -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm a passionate web developer with a love for creating digital experiences that are both beautiful and functional.</p>
+                    <p>With a background in design and development, I bring a unique perspective to every project I work on. I believe in clean code, user-centered design, and continuous learning.</p>
+                    <p>When I'm not coding, you can find me exploring nature, reading books, or experimenting with photography.</p>
+                    
+                    <h3>My Hobbies</h3>
+                    <div class="hobbies">
+                        <span class="hobby-tag">Photography</span>
+                        <span class="hobby-tag">Hiking</span>
+                        <span class="hobby-tag">Reading</span>
+                        <span class="hobby-tag">Cooking</span>
+                        <span class="hobby-tag">Travel</span>
+                        <span class="hobby-tag">Music</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <!-- This is where your about photo goes -->
+                    <div style="width:100%;height:400px;background:linear-gradient(135deg, var(--pink), var(--blue));display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;">
+                        Your Photo Here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION: Showcase your work -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+                <p>Here are some of my recent projects</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- PROJECT 1 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-img" style="background:linear-gradient(135deg, var(--purple), var(--blue));">
+                        Project 1
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>E-commerce Website</h3>
+                        <p>A fully responsive e-commerce platform with shopping cart and payment integration.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">HTML/CSS</span>
+                            <span class="portfolio-tag">JavaScript</span>
+                            <span class="portfolio-tag">React</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <!-- PROJECT 2 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-img" style="background:linear-gradient(135deg, var(--pink), var(--purple));">
+                        Project 2
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Task Management App</h3>
+                        <p>A productivity application for managing daily tasks with drag-and-drop functionality.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Vue.js</span>
+                            <span class="portfolio-tag">Firebase</span>
+                            <span class="portfolio-tag">CSS</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <!-- PROJECT 3 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-img" style="background:linear-gradient(135deg, var(--blue), var(--pink));">
+                        Project 3
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Travel Blog</h3>
+                        <p>A responsive blog website with content management system for travel enthusiasts.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">WordPress</span>
+                            <span class="portfolio-tag">PHP</span>
+                            <span class="portfolio-tag">MySQL</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION: What you're good at -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+                <p>Here's what I can do</p>
+            </div>
+            <div class="skills-container">
+                <!-- FRONTEND SKILLS -->
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML/CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BACKEND SKILLS -->
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Node.js</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>PHP</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- TOOLS -->
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Git</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Figma</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>VS Code</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-download">
+                <a href="#" class="btn">Download My Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION: Your writings -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Blog</h2>
+                <p>Thoughts, tutorials, and updates</p>
+            </div>
+            <div class="blog-grid">
+                <!-- BLOG POST 1 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        Blog Post 1
+                    </div>
+                    <div class="blog-content">
+                        <h3>Getting Started with React Hooks</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">May 15, 2023</span>
+                            <span class="blog-category">Web Development</span>
+                        </div>
+                        <p>Learn how to use React Hooks to simplify your functional components and manage state effectively.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- BLOG POST 2 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        Blog Post 2
+                    </div>
+                    <div class="blog-content">
+                        <h3>CSS Grid vs Flexbox</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">April 22, 2023</span>
+                            <span class="blog-category">CSS</span>
+                        </div>
+                        <p>A comprehensive comparison between CSS Grid and Flexbox and when to use each layout method.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- BLOG POST 3 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        Blog Post 3
+                    </div>
+                    <div class="blog-content">
+                        <h3>My Journey into Web Development</h3>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 10, 2023</span>
+                            <span class="blog-category">Personal</span>
+                        </div>
+                        <p>Sharing my personal story of how I transitioned into web development and the lessons I've learned.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION: Your photos -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Gallery</h2>
+                <p>A glimpse into my world</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, var(--pink), var(--purple));display:flex;align-items:center;justify-content:center;color:white;">
+                        Photo 1
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, var(--blue), var(--pink));display:flex;align-items:center;justify-content:center;color:white;">
+                        Photo 2
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, var(--purple), var(--blue));display:flex;align-items:center;justify-content:center;color:white;">
+                        Photo 3
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, var(--pink), var(--blue));display:flex;align-items:center;justify-content:center;color:white;">
+                        Photo 4
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, var(--blue), var(--purple));display:flex;align-items:center;justify-content:center;color:white;">
+                        Photo 5
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, var(--purple), var(--pink));display:flex;align-items:center;justify-content:center;color:white;">
+                        Photo 6
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION: How people can reach you -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Let's work together</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>yourname@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Your City, Country</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>  <!-- Facebook -->
+                        <a href="#" class="social-link">🐦</a>  <!-- Twitter -->
+                        <a href="#" class="social-link">📷</a>  <!-- Instagram -->
+                        <a href="#" class="social-link">💼</a>  <!-- LinkedIn -->
+                        <a href="#" class="social-link">🐙</a>  <!-- GitHub -->
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Enter subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER: Bottom of the page -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Your<span>Name</span></div>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT: Makes the website interactive -->
+    <script>
+        // THEME TOGGLE FUNCTIONALITY
+        
+        // Get the theme toggle button and body element
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check if user previously set a theme preference
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        // Apply the saved theme
+        body.setAttribute('data-theme', currentTheme);
+        
+        // Update button emoji based on current theme
+        if (currentTheme === 'dark') {
+            themeToggle.textContent = '☀️';  // Sun for light mode
+        } else {
+            themeToggle.textContent = '🌙';  // Moon for dark mode
+        }
+        
+        // When theme button is clicked
+        themeToggle.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'light') {
+                // Switch to dark theme
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');  // Save preference
+            } else {
+                // Switch to light theme
+                body.setAttribute('data-theme', 'light');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');  // Save preference
+            }
+        });
+        
+        // MOBILE MENU TOGGLE
+        
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // When hamburger menu is clicked
+        mobileMenu.addEventListener('click', () => {
+            // Toggle between showing and hiding the menu
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // CONTACT FORM SUBMISSION
+        
+        const contactForm = document.getElementById('contactForm');
+        
+        // When form is submitted
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();  // Prevents page reload
+            
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+            
+            // Clear the form
+            contactForm.reset();
+        });
+        
+        // SMOOTH SCROLLING FOR NAVIGATION LINKS
+        
+        // Get all links that start with # (internal links)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();  // Prevents jumpy behavior
+                
+                const targetId = this.getAttribute('href');
+                
+                // Don't do anything if it's just #
+                if (targetId === '#') return;
+                
+                // Find the target section
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Smoothly scroll to the section
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,  // Adjust for header height
+                        behavior: 'smooth'                 // Smooth animation
+                    });
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        navLinks.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+## How to Use This Code
+
+1. **Copy the entire code** above
+2. **Open a text editor** (like Notepad, VS Code, or any code editor)
+3. **Paste the code** into a new file
+4. **Save the file** as `index.html`
+5. **Open the file** in your web browser
+
+That's it! Your personal website is now running locally on your computer.
+
+## Key Parts to Customize
+
+- **Your Name**: Replace "Your Name" throughout the file
+- **Contact Info**: Update email, phone, and location
+- **Skills**: Change the skills and percentages to match yours
+- **Projects**: Replace the placeholder projects with your real work
+- **Photos**: Replace the colored boxes with actual images
+
+The code includes detailed comments (lines starting with `//` or between `/* */`) that explain what each part does, so you can easily find what you need to change.
