@@ -8,6 +8,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border: none;
+            margin: 0;
+        }
+        .portfolio-img-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem;
+            overflow: hidden;
+        }
+        .portfolio-img-label img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .portfolio-img.purple-blue {
+            background: linear-gradient(135deg, var(--purple), var(--blue));
+        }
+        .portfolio-img.pink-purple {
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+        }
+        .portfolio-img.blue-pink {
+            background: linear-gradient(135deg, var(--blue), var(--pink));
+        }
+    </style>
 </head>
 <body data-theme="light">
     <!-- Header & Navigation -->
@@ -38,38 +78,35 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="portfolio-img" style="background:linear-gradient(135deg, var(--purple), var(--blue));">
-                        Project 1
+                    <div class="portfolio-img purple-blue">
+                        <img src="images/screenshot-1781712628566.png" alt="Screenshot of Rolls-Royce luxury automobile website featuring navigation menu with Home, About Us, Models, Services, Gallery, and Contact Us options. Dark sophisticated design with Rolls-Royce logo, front-facing vehicle image with LED headlights, and Spirit of Ecstasy hood ornament displayed against a premium black background. Text reads Welcome to Rolls-Royce and Luxury Redefined." loading="lazy">
                     </div>
                     <div class="portfolio-content">
-                        <h3>E-commerce Website</h3>
-                        <p>A fully responsive e-commerce platform with shopping cart and payment integration.</p>
+                        <h3>Rolls Royce Website</h3>
+                        <p>A static website for a luxury car brand.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">HTML/CSS</span>
+                        </div>
+                        <a href="https://favorite-car.netlify.app/" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img pink-purple">
+                        <span class="portfolio-img-label"><img src="images/Screenshot_15-6-2026_162230_homepagecole.netlify.app.jpeg" alt="Starbucks Homepage Clone" loading="lazy"></span>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Starbucks homepage clone</h3>
+                        <p>A clone of the Starbucks homepage with a modern design and responsive layout.</p>
                         <div class="portfolio-tags">
                             <span class="portfolio-tag">HTML/CSS</span>
                             <span class="portfolio-tag">JavaScript</span>
-                            <span class="portfolio-tag">React</span>
                         </div>
-                        <a href="#" class="btn">View Project</a>
+                        <a href="https://homepagecole.netlify.app/" class="btn">View Project</a>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-img" style="background:linear-gradient(135deg, var(--pink), var(--purple));">
-                        Project 2
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Task Management App</h3>
-                        <p>A productivity application for managing daily tasks with drag-and-drop functionality.</p>
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Vue.js</span>
-                            <span class="portfolio-tag">Firebase</span>
-                            <span class="portfolio-tag">CSS</span>
-                        </div>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-img" style="background:linear-gradient(135deg, var(--blue), var(--pink));">
-                        Project 3
+                    <div class="portfolio-img blue-pink">
+                        <span class="portfolio-img-label"><img src="images/Screenshot_15-6-2026_162230_homepagecole.netlify.app.jpeg" alt="Travel Blog Preview" loading="lazy"></span>
                     </div>
                     <div class="portfolio-content">
                         <h3>Travel Blog</h3>
