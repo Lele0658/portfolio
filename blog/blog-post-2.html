@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid vs Flexbox - Leoneigh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .blog-post-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .blog-post-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .blog-post-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .blog-post-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .blog-post-content code {
+            background-color: var(--card-bg);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: var(--pink);
+            border: 1px solid var(--border-color);
+        }
+
+        .blog-post-content pre {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .blog-post-content pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        .back-to-blog {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--blue);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .back-to-blog:hover {
+            color: var(--purple);
+        }
+
+        .comparison-table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--card-bg);
+            font-weight: 600;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><span>Leoneigh</span></div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Post Section -->
+    <section class="blog-post">
+        <div class="container">
+            <div class="blog-post-container">
+                <a href="../blog.html" class="back-to-blog">← Back to Blog</a>
+                
+                <div class="blog-post-header">
+                    <h1>CSS Grid vs Flexbox</h1>
+                    <div class="blog-post-meta">
+                        <span class="blog-date">April 22, 2023</span>
+                        <span class="blog-category">CSS</span>
+                    </div>
+                </div>
+
+                <div class="blog-post-content">
+                    <p>Two of the most important CSS layout tools available to modern web developers are CSS Grid and Flexbox. Both are incredibly powerful, but they serve different purposes and have different strengths. Understanding when to use each one will make you a better front-end developer. In this post, we'll compare these two layout methods in detail.</p>
+
+                    <h2>What is Flexbox?</h2>
+                    <p>Flexbox is a one-dimensional layout method designed to arrange items in a single row or column. It's excellent for distributing space along a single axis and aligning items. Flexbox is particularly useful for navigation bars, button groups, and any linear arrangement of elements.</p>
+                    <p>Here's a basic example:</p>
+                    <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  flex: 1;
+  margin: 0 10px;
+}</code></pre>
+
+                    <h2>What is CSS Grid?</h2>
+                    <p>CSS Grid is a two-dimensional layout method that allows you to create complex layouts with rows and columns. It gives you complete control over the placement of elements in a grid structure. Grid is perfect for overall page layouts, magazine-style designs, and any layout that requires alignment in both dimensions.</p>
+                    <p>Here's a basic example:</p>
+                    <pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: #ddd;
+  padding: 20px;
+}</code></pre>
+
+                    <h2>Comparison Table</h2>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Flexbox</th>
+                                <th>CSS Grid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dimensions</td>
+                                <td>One-dimensional (row or column)</td>
+                                <td>Two-dimensional (rows and columns)</td>
+                            </tr>
+                            <tr>
+                                <td>Use Case</td>
+                                <td>Linear layouts, navigation, alignment</td>
+                                <td>Complex layouts, page structure</td>
+                            </tr>
+                            <tr>
+                                <td>Browser Support</td>
+                                <td>Excellent</td>
+                                <td>Very Good (IE not supported)</td>
+                            </tr>
+                            <tr>
+                                <td>Learning Curve</td>
+                                <td>Easier</td>
+                                <td>More complex</td>
+                            </tr>
+                            <tr>
+                                <td>Performance</td>
+                                <td>Excellent</td>
+                                <td>Excellent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>When to Use Flexbox</h2>
+                    <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Navigation menus</li>
+                        <li style="margin-bottom: 0.5rem;">Centering content</li>
+                        <li style="margin-bottom: 0.5rem;">Aligning items in a row or column</li>
+                        <li style="margin-bottom: 0.5rem;">Components with a single direction flow</li>
+                        <li style="margin-bottom: 0.5rem;">Responsive button groups</li>
+                    </ul>
+
+                    <h2>When to Use CSS Grid</h2>
+                    <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Page layouts</li>
+                        <li style="margin-bottom: 0.5rem;">Gallery layouts</li>
+                        <li style="margin-bottom: 0.5rem;">Dashboard designs</li>
+                        <li style="margin-bottom: 0.5rem;">Card-based layouts</li>
+                        <li style="margin-bottom: 0.5rem;">Complex, multi-axis alignments</li>
+                    </ul>
+
+                    <h2>Can You Use Both?</h2>
+                    <p>Absolutely! In fact, using both Flexbox and CSS Grid together is a common and recommended approach. Many modern layouts use Grid for the overall page structure and Flexbox for component-level layouts. They complement each other perfectly.</p>
+
+                    <h2>Conclusion</h2>
+                    <p>Both Flexbox and CSS Grid are essential tools for modern web development. Neither is "better" than the other—they're designed for different purposes. Flexbox excels at one-dimensional layouts and component alignment, while CSS Grid shines for two-dimensional, complex layouts. Master both, understand their strengths, and you'll be able to create flexible, responsive, and elegant web designs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo"><span>Leoneigh</span></div>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Leoneigh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with React Hooks - Leoneigh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .blog-post-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .blog-post-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .blog-post-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .blog-post-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .blog-post-content code {
+            background-color: var(--card-bg);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: var(--pink);
+            border: 1px solid var(--border-color);
+        }
+
+        .blog-post-content pre {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .blog-post-content pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        .back-to-blog {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--blue);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .back-to-blog:hover {
+            color: var(--purple);
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><span>Leoneigh</span></div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Post Section -->
+    <section class="blog-post">
+        <div class="container">
+            <div class="blog-post-container">
+                <a href="../blog.html" class="back-to-blog">← Back to Blog</a>
+                
+                <div class="blog-post-header">
+                    <h1>Getting Started with React Hooks</h1>
+                    <div class="blog-post-meta">
+                        <span class="blog-date">May 15, 2023</span>
+                        <span class="blog-category">Web Development</span>
+                    </div>
+                </div>
+
+                <div class="blog-post-content">
+                    <p>React Hooks have revolutionized the way we write React components. Introduced in React 16.8, hooks allow you to use state and other React features without writing class components. In this comprehensive guide, we'll explore what hooks are, why they matter, and how to use them effectively in your projects.</p>
+
+                    <h2>What Are React Hooks?</h2>
+                    <p>React Hooks are functions that let you "hook into" React features. They allow you to use state and other React features in functional components, which were previously only available in class components. The two most important hooks are <code>useState</code> and <code>useEffect</code>.</p>
+
+                    <h2>The useState Hook</h2>
+                    <p>The <code>useState</code> hook is the most commonly used hook. It allows you to add state to your functional components. Here's a basic example:</p>
+                    <pre><code>import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={() => setCount(count + 1)}&gt;
+        Increment
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+                    <p>In this example, <code>useState(0)</code> initializes the state with a value of 0. The hook returns an array with two elements: the current state value and a function to update it.</p>
+
+                    <h2>The useEffect Hook</h2>
+                    <p>The <code>useEffect</code> hook allows you to perform side effects in functional components. Side effects can include fetching data, subscribing to services, or manually changing the DOM.</p>
+                    <pre><code>import React, { useState, useEffect } from 'react';
+
+function FetchData() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      });
+  }, []);
+
+  return (
+    &lt;div&gt;
+      {loading ? &lt;p&gt;Loading...&lt;/p&gt; : &lt;p&gt;{data}&lt;/p&gt;}
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+                    <h2>Custom Hooks</h2>
+                    <p>One of the most powerful features of hooks is the ability to create custom hooks. Custom hooks are JavaScript functions whose names start with "use" and may call other hooks. They allow you to extract component logic into reusable functions.</p>
+
+                    <h2>Best Practices</h2>
+                    <p>When using hooks, keep these best practices in mind:</p>
+                    <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Only call hooks at the top level of your function</li>
+                        <li style="margin-bottom: 0.5rem;">Only call hooks from React functions</li>
+                        <li style="margin-bottom: 0.5rem;">Use the ESLint plugin to enforce these rules</li>
+                        <li style="margin-bottom: 0.5rem;">Keep your custom hooks simple and focused</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>React Hooks have made functional components more powerful and flexible. By mastering hooks like <code>useState</code> and <code>useEffect</code>, and learning to create custom hooks, you'll write cleaner, more maintainable React code. Start experimenting with hooks in your next project and see how they can improve your development workflow!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo"><span>Leoneigh</span></div>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Leoneigh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

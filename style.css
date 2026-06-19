@@ -508,16 +508,21 @@
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
+            width: 36px;
+            height: 36px;
             background: linear-gradient(to right, var(--pink), var(--purple));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
+            margin-right: 12px;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .contact-icon i {
+            font-size: 0.95rem;
+            line-height: 1;
         }
 
         .contact-form {
@@ -574,6 +579,13 @@
             background: linear-gradient(to right, var(--pink), var(--purple));
             color: white;
             transform: translateY(-3px);
+        }
+
+        /* Constrain inline SVGs inside social links to match icon size */
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            display: block;
         }
 
         /* Footer */

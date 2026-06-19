@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey into Web Development - Leoneigh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .blog-post-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .blog-post-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .blog-post-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .blog-post-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .blog-post-content code {
+            background-color: var(--card-bg);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: var(--pink);
+            border: 1px solid var(--border-color);
+        }
+
+        .blog-post-content pre {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .blog-post-content pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        .back-to-blog {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--blue);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .back-to-blog:hover {
+            color: var(--purple);
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><span>Leoneigh</span></div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Post Section -->
+    <section class="blog-post">
+        <div class="container">
+            <div class="blog-post-container">
+                <a href="../blog.html" class="back-to-blog">← Back to Blog</a>
+                
+                <div class="blog-post-header">
+                    <h1>My Journey into Web Development</h1>
+                    <div class="blog-post-meta">
+                        <span class="blog-date">March 10, 2023</span>
+                        <span class="blog-category">Personal</span>
+                    </div>
+                </div>
+
+                <div class="blog-post-content">
+                    <p>Starting a career in web development can be intimidating, especially when you're just beginning. In this post, I want to share my personal journey into web development—the challenges I faced, the lessons I learned, and the advice I wish I'd received when I started. I hope this inspires someone out there who's thinking about making the transition into this exciting field.</p>
+
+                    <h2>The Beginning</h2>
+                    <p>I didn't grow up wanting to be a web developer. In fact, I had never written a line of code before my first year of university. Like many people, I stumbled into tech somewhat by accident. I was studying a completely different field when I took a computer science elective just to fulfill a requirement. That one class changed my life.</p>
+                    <p>I was fascinated by the idea of creating things with code. The concept that I could write some text and have it produce something tangible, something that could be interactive and useful, was mind-blowing. From that moment on, I was hooked.</p>
+
+                    <h2>Learning the Fundamentals</h2>
+                    <p>The first few months were all about learning HTML, CSS, and JavaScript. I spent countless hours watching tutorials, reading documentation, and building small projects. The learning curve was steep, but I was determined.</p>
+                    <p>One of the biggest challenges was understanding how everything connected. HTML provided structure, CSS made things look good, and JavaScript made them interactive. It took time to really grasp how these three languages worked together to create the web experiences we use every day.</p>
+
+                    <h2>The Imposter Syndrome</h2>
+                    <p>About six months into learning, I hit a wall. I thought I wasn't smart enough for this field. Everyone around me seemed to understand concepts faster than I did. I looked at senior developers' code and felt completely overwhelmed. This was imposter syndrome, though I didn't know it had a name at the time.</p>
+                    <p>What helped me get through this was connecting with other junior developers. Realizing that I wasn't alone in these feelings was reassuring. We all struggled. We all felt inadequate at times. And that's completely normal.</p>
+
+                    <h2>Breaking Through with Projects</h2>
+                    <p>The real turning point came when I stopped just doing tutorials and started building actual projects. I created a portfolio website, built a weather app using an API, and developed a small social media project. These projects forced me to problem-solve in real ways, to read documentation, to debug my own code.</p>
+                    <p>Building projects also gave me something to show potential employers. While I was still learning, I could demonstrate what I'd learned through my work. This confidence boost was invaluable.</p>
+
+                    <h2>Embracing Continuous Learning</h2>
+                    <p>Web development is a field that's constantly evolving. New frameworks, tools, and best practices emerge regularly. At first, this seemed overwhelming. How could I ever keep up? But I've come to see it as one of the best parts of the job. There's always something new to learn, always room to grow.</p>
+                    <p>I learned that the most important skill isn't knowing everything—it's knowing how to learn. How to read documentation, how to use Google effectively, how to break down problems into manageable pieces.</p>
+
+                    <h2>The Community</h2>
+                    <p>One of the greatest discoveries in my journey was the web development community. Online forums, Discord servers, Twitter, GitHub—there are so many places to connect with other developers. People are generally willing to help, to answer questions, to provide feedback on your code.</p>
+                    <p>I'm grateful for everyone who helped me along the way, and now I try to pay it forward by helping newer developers when I can. This sense of community has been crucial to my growth and continues to inspire me.</p>
+
+                    <h2>My Advice</h2>
+                    <p>If you're thinking about transitioning into web development, here's what I'd tell you:</p>
+                    <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Start with the fundamentals. Master HTML, CSS, and JavaScript before moving on to frameworks.</li>
+                        <li style="margin-bottom: 0.5rem;">Build projects. This is the best way to learn and to build a portfolio.</li>
+                        <li style="margin-bottom: 0.5rem;">Don't compare your beginning to someone else's middle. Everyone progresses at their own pace.</li>
+                        <li style="margin-bottom: 0.5rem;">Join the community. Connect with other developers, ask questions, and share your progress.</li>
+                        <li style="margin-bottom: 0.5rem;">Embrace that you won't know everything, and that's okay. The ability to learn is more valuable than knowing it all.</li>
+                        <li style="margin-bottom: 0.5rem;">Keep building. The more you code, the better you become. There's no substitute for practice.</li>
+                    </ul>
+
+                    <h2>Looking Forward</h2>
+                    <p>My journey into web development has been incredible. It's challenged me, frustrated me, excited me, and ultimately changed my life. I'm grateful for every tutorial, every bug I've debugged, every project I've built, and every person I've learned from.</p>
+                    <p>If you're just starting out, or if you're thinking about making the leap into web development, I encourage you to take the plunge. It's a challenging but rewarding field, and the best time to start is now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo"><span>Leoneigh</span></div>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Leoneigh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
